@@ -7,6 +7,10 @@ admin.autodiscover()
 urlpatterns = patterns('',
     # Examples:
     url(r'^$', 'seguimiento.views.home', name='home'),
+    
+    url(r'^proyectos/lista/$', 'seguimiento.proyecto.lista'),
+    url(r'^proyecto/(?P<proyecto_id>\d+)/$', 'seguimiento.proyecto.detalle'),
+    
     # url(r'^leyes/', include('leyes.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:

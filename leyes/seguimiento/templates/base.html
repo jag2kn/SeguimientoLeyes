@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<script type='text/javascript' src='/static/js/jquery-1.7.1.min.js'></script>
+	<script type='text/javascript' src='/static/js/jquery-ui-1.8.18.custom.min.js'></script>
+	<script type='text/javascript' src='/static/js/tree.jquery.js'></script>
+	<script type='text/javascript' src='/static/js/json2.js'></script>
+	{% block javascript %}
+	{% endblock %}
+	<!--script type='text/javascript' src='/static/js/jquery.cookie.js'></script-->
+	<script type="text/javascript" src="/static/js/jquery.dataTables.js"></script>
+	<link rel="stylesheet" href="/static/css/start/jquery-ui-1.8.18.custom.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="/static/css/style.css" />
+	<link rel="stylesheet" href="/static/css/tree/jqtree.css" />
+	<link rel="stylesheet" href="/static/css/datatables/jquery.dataTables_themeroller.css" />
+	{% block css %}
+	{% endblock %}
+	<title>Seguimiento leyes - RedPaTodos</title>
+</head>
+
+
+<body>
+    <div id="sidebar">
+        {% block sidebar %}
+        <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/admin">Administración</a></li>
+            <!--li><a href="/login/">Ingresar</a></li-->
+            <!--li><a href="/logout/">Salir</a></li-->
+            <hr>
+        </ul>
+        {% endblock %}
+    </div>
+
+    <div id="titulo">
+		{% block tituloYMensajes %}
+		<h3>Seguimiento de leyes</h3>
+		{{msg}}
+		{% endblock %}
+    </div>
+    <div id="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
